@@ -15,7 +15,7 @@ jobs:
            cd Docker
        - name: Docker build
          run: |
-           docker build -t docker-node-app:latest .
+           docker build -f Docker/Dockerfile -t docker-node-app:latest .
        - name: Docker build save
          run: |
            docker save docker-node-app:latest | gzip > docker-node-app_latest.tar.gz
